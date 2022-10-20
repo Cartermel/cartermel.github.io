@@ -1,0 +1,45 @@
+html {
+	background: #000;
+	font-family: monospace;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+h1 {
+	color: #fff;
+	margin: 0;
+}
+
+@keyframes x-movement {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(100% - 2ch);
+	}
+}
+
+@keyframes y-movement {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100% - 38ch);
+	}
+}
+
+h1 {
+	position: relative;
+	margin: 0;
+	animation-name: x-movement, y-movement;
+	animation-duration: 10s, 7s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
